@@ -1,0 +1,45 @@
+title: Change android app icon
+summary: This changes the android app icon
+description: TThis changes the android app icon
+published_at: 2019-11-12T12:07:20.751143473Z
+website: https://hatsa.com
+source:
+  git: https://github.com/OOShoppingnl/bitrise-step-android-app-icon.git
+  commit: edfe20af6f02454977723396e9f6a98889462db8
+host_os_tags:
+- osx-10.11
+type_tags:
+- artifact-info
+toolkit:
+  bash:
+    entry_file: step.sh
+deps:
+  brew:
+  - name: git
+  apt_get:
+  - name: git
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+inputs:
+  - manifest_location: null
+    opts:
+      description: |
+        The android manifest location
+      is_required: true
+      summary: Manifest
+      title: Manifest
+  - new_appicon: null
+    opts:
+      description: |
+        The new android app icon
+      is_required: true
+      summary: New appicon
+      title: New appicon
+  - old_appicon: null
+    opts:
+      description: |
+        The old appicon name
+      is_required: true
+      summary: Old appicon name
+      title: Old appicon name
